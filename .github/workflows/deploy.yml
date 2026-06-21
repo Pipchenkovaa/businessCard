@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Deploy Vite app to GitHub Pages
 
 on:
   push:
@@ -29,19 +29,19 @@ jobs:
           node-version: 22
           cache: npm
 
-      - name: Setup GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Next.js project
+      - name: Build Vite project
         run: npm run build
 
-      - name: Upload static export
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./dist
 
   deploy:
     environment:
