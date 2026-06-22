@@ -23,7 +23,7 @@ export function About() {
 
         <Reveal delay={0.15}>
           <GlassCard className="p-7 sm:p-9">
-            <span className="font-mono text-xs uppercase tracking-tight text-muted">
+            <span className="font-mono text-sm uppercase tracking-tight text-muted">
               {a.highlightsLabel}
             </span>
             <ul className="mt-6 space-y-4">

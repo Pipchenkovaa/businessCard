@@ -9,7 +9,7 @@ export function Stack() {
 		<section id="stack" className="mx-auto max-w-6xl px-4 py-20 sm:py-24">
 			<SectionHeader n="04" eyebrow={c.stack.eyebrow} title={c.stack.title} />
 			<Reveal delay={0.1}>
-				<p className="mt-5 max-w-2xl leading-relaxed text-muted">
+				<p className="mt-5 max-w-4xl leading-relaxed text-muted">
 					{c.stack.note}
 				</p>
 			</Reveal>

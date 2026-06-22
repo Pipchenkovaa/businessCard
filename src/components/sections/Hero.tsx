@@ -38,11 +38,11 @@ export function Hero() {
 			<PixelField />
 
 			<div className="relative z-10 mx-auto max-w-6xl">
-				<div className="mb-10 flex items-center justify-between font-mono text-xs font-bold uppercase tracking-tight">
+				<div className="mb-10 flex items-center justify-between font-mono text-sm font-bold uppercase tracking-tight text-muted">
 					<span>
-						<span className="text-accent">00</span>
-						<span className="mx-2 text-accent/40">//</span>
-						<span className="text-ink/80">{c.hero.marker}</span>
+						<span>00</span>
+						<span className="mx-2">//</span>
+						<span>{c.hero.marker}</span>
 					</span>
 				</div>
 
@@ -57,12 +57,12 @@ export function Hero() {
 						className="mb-6 flex flex-wrap justify-between items-center gap-x-4 gap-y-2"
 					>
 						<Eyebrow>{c.hero.role}</Eyebrow>
-						<span className="flex items-center gap-2">
-							<span className="relative flex h-2 w-2">
+						<span className="flex items-center gap-3.5">
+							<span className="relative flex h-3 w-3">
 								<span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-								<span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+								<span className="relative inline-flex h-3 w-3 rounded-full bg-accent" />
 							</span>
-							<span className="font-mono text-xs uppercase tracking-tight text-ink/70">
+							<span className="font-mono text-sm uppercase tracking-tight text-ink/70">
 								{c.hero.availability}
 							</span>
 						</span>
@@ -109,7 +109,7 @@ export function Hero() {
 						<a
 							href={links.cv}
 							download
-							className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-white/[0.08]"
+							className="glass-soft inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.04] px-5 py-3 text-sm font-medium text-ink transition-colors hover:bg-white/[0.08]"
 						>
 							<Download className="h-4 w-4" />
 							{c.ui.downloadCv}
@@ -126,7 +126,7 @@ export function Hero() {
 				>
 					{c.hero.meta.map((m) => (
 						<div key={m.k} className="px-6 py-6">
-							<dt className="font-mono text-[11px] uppercase tracking-tight text-accent/80">
+							<dt className="font-mono text-sm uppercase tracking-tight text-accent/80">
 								{m.k}
 							</dt>
 							<dd className="mt-2 text-sm text-ink/90">{m.v}</dd>
